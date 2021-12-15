@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+header nav {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+header nav .logo h1 {
+    font-family: 'Lora', sans-serif;
+}
+
+header nav ul.nav-menu {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul.nav-menu li {
+    margin: 0 2em;
+}
+
+header nav ul.nav-menu li a {
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
+}
+
+header nav ul.nav-menu li a:hover {
+    color: #113CFC;
+}
+
+header nav .authentication ul {
+    display: flex;
+    flex-direction: row;
+}
+
+header nav .authentication ul li {
+    margin-right: 1em;
+}
+
+header nav .authentication ul li a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: ease-in .2s;
+}
+
+header nav .authentication ul li a:hover {
+    color: #113CFC;
+}
+
+header .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-image {
+    height: 100vh;
+    position: relative;
+}
+
+.hero-img-left {
+    background: url('../images/hero-1.jpg');
+    background-size: cover;
+}
+
+.hero-img-right {
+    background: url('../images/hero-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-image .content {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lora', serif;
+    height: 100%;
+    justify-content: center;
+    margin-left: 2em;
+    margin-top: 15em;
+    width: 50%;
+    z-index: 1;
+}
+
+.hero-image h2 {
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+.hero-image.hero-img-left h2 {
+    color: #fff;
+}
+
+.hero-image h2 span {
+    display: flex;
+}
+
+.hero-image p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 1em;
+}
+
+.hero-image.hero-img-left p {
+    color: #bbb;
+}
+
+.hero-image.hero-img-right p {
+    color: #666;
+}
+
+.hero-image .btn {
+    margin-top: 2em;
+}
+
+.hero-image a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    transition: ease-in .2s;
+}
+
+.hero-image.hero-img-left a {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #000;    
+}
+
+.hero-image.hero-img-right a {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+}
+
+.hero-image.hero-img-left a:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.hero-image.hero-img-right a:hover {
+    background: transparent;
+    color: #000;
+}
+
+/* PRODUCTS */
+
+.e-padding {
+    padding: 5em 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: 2;
+    margin-top: 2em;
+}
+
+section .title {
+    grid-column: 2;
+}
+
+section .title h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+section article,
+section .wrapper {
+    display: grid;
+    margin: 0 1em;
+}
+
+.view-more-btn {
+    grid-column: 2;
+    margin-top: 5em;
+    place-self: center;
+}
+
+.view-more-btn a {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    transition: ease-in .2s;
+}
+
+.view-more-btn a:hover {
+    background: #fff;
+    color: #000;
+}
+
+section article img {
+    padding: 1em;
+    margin-top: 1px;
+    width: 100%;
+}
+
+section.products article a {
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-left: 1em;
+    text-decoration: none;
+    transition: ease-in .2s;
+}
+
+section.products article a:hover {
+    color: #113CFC;
+}
+
+section.products p {
+    color: #666;
+    font-family: 'Lora', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+/* PRODUCT DELIVERY */
+
+section.product-delivery {
+    background: #113CFC;
+}
+
+section.product-delivery .wrapper {
+    display: flex;
+    align-items: center;
+}
+
+section.product-delivery .wrapper p {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-left: 1em;
+}
+
+/* CUSTOMER REVIEWS */
+
+section.customer-reviews article h3 {
+    font-family: 'Raleway', sans-serif;
+    margin-left: 1em;
+}
+
+section.customer-reviews article ul {
+    display: inline-flex;
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+section.customer-reviews article ul li svg{
+    fill: rgb(17, 60, 252);
+    height: 1.5em;
+    stroke: #113CFC;
+    width: 1.5em;
+}
+
+section.customer-reviews article p {
+    color: #666;
+    font-family: 'Lora';
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+/* BEST DEALS */
+
+section.best-deals {
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0.9), rgba(17, 60, 252, 0.9)), url('../images/best-deals.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section.best-deals .wrapper {
+    grid-column: 2;
+    text-align: center;
+}
+
+section.best-deals .wrapper h1 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    font-weight: 400;
+}
+
+section.best-deals .wrapper p {
+    color: #ddd;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 15%;
+    margin-top: 1em;
+}
+
+section.best-deals .wrapper .explore-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+section.best-deals .wrapper .explore-btn a {
+    background: #fff;
+    border: 1px solid #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    transition: ease-in .2s;
+}
+
+section.best-deals .wrapper .explore-btn a:hover {
+    background: transparent;
+    color: #fff;
+}
+
+/* PRODUCT CATEGORIES */
+
+section.product-categories article a {
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-left: 1em;
+    text-decoration: none;
+    transition: ease-in .2s;
+}
+
+section.product-categories article a:hover {
+    color: #113CFC;
+}
+
+section.product-categories p {
+    color: #666;
+    font-family: 'Lora', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+/* NEWSLETTERS */
+
+section.newsletters .wrapper {
+    background: #000;
+    color: #fff;
+    grid-column: 2;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    width: 50%;
+}
+
+section.newsletters .wrapper h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.75em;
+}
+
+section.newsletters .wrapper p {
+    color: #ddd;
+    font-family: 'Lora', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-top: 1em;
+}
+
+section.newsletters .wrapper form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+section.newsletters .wrapper form label {
+    font-family: 'Lora', sans-serif;
+    font-size: 0.9em;
+}
+
+section.newsletters .wrapper form input {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    width: fit-content;
+}
+
+section.newsletters .wrapper form input[type="email"] {
+    width: 25%;
+}
+
+section.newsletters .wrapper form button {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 0;
+    cursor: pointer;
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 0.9em;
+    margin-top: 1em;
+    padding: 0.5em 2em;
+    transition: ease-in .2s;
+}
+
+section.newsletters .wrapper form button:hover {
+    background: transparent;
+    color: #fff;
+}
+
+/* FAQ */
+
+section.faq .accordion-body {
+    grid-column: 2;
+    margin-top: 2em;
+}
+
+section.faq .accordion {
+    width: 50%;
+    margin: 0 auto;
+    color: black;
+    background-color: white;
+}
+
+section.faq .accordion .faq-wrapper {
+    border: 1px solid rgb(185, 185, 185);
+    padding: 0.5em 2em;
+    margin: 0.5em 0;
+    position: relative;
+}  
+  
+section.faq .accordion .label {
+    position: relative;
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-family: 'Raleway';
+    color: black;
+    cursor: pointer;
+}
+
+section.faq .accordion .label::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+ 
+section.faq .accordion .label h3 {
+    font-size: 1em;
+}
+  
+section.faq .accordion .content {
+    position: relative;
+    background: white;
+    height: 0;
+    font-size: 1em;
+    text-align: justify;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+section.faq .accordion .content p {
+    font-family: 'Lora', sans-serif;
+    font-weight: 500;
+    margin: 1em 0;
+}
+
+section.faq .accordion .faq-wrapper.active .content {
+    height: 10rem;
+}
+  
+section.faq .accordion .faq-wrapper.active .label::before {
+    content: '-';
+    font-size: 30px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #000;
+    color: #fff;
+}
+
+footer article {
+    margin: 0 auto;
+}
+
+footer h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+footer ul {
+    margin-top: 1em;
+}
+
+footer ul li {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    margin: 0.5em 0;
+}
+
+footer .social-media ul {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .social-media ul li {
+    margin-right: 1em;
+}
+
+footer ul li a ion-icon {
+    color: #fff;
+    font-size: 1.5em;
+    transition: ease-in .2s;
+}
+
+footer ul li a:hover ion-icon {
+    color: #113CFC;
+}
+
+@media only screen and (max-width: 430px) and (orientation: portrait) {
+    header .hero {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .hero-image {
+        height: 50vh;   
+    }
+
+    .hero-image .content {
+        margin-left: 0;
+        left: 0;
+        margin-left: 1em;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        z-index: 1;
+    }
+
+    .hero-image h2 {
+        font-size: 2em;
+    }
+
+    .hero-image p {
+        font-size: 0.9em;
+    }
+
+    .hero-image a {
+        font-size: 0.8em;
+    }
+}
