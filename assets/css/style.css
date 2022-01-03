@@ -1,18 +1,106 @@
+/* General Settings */
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+img {
+    width: 100%;
 }
 
 ul {
     list-style: none;
 }
 
+.e-padding {
+    padding: 5em 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+}
+
+.row {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column: 2;
+    margin-top: 2em;
+}
+
+section .title {
+    grid-column: 2;
+    padding: 2em 0;
+}
+
+section .title h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+section .title p {
+    font-family: 'Lora', sans-serif;
+    margin-top: 1em;
+    text-align: center;
+}
+
+section article,
+section .wrapper {
+    display: grid;
+}
+
+.view-more-btn {
+    grid-column: 2;
+    margin-top: 5em;
+    place-self: center;
+}
+
+.view-more-btn a {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    transition: ease-in .2s;
+}
+
+.view-more-btn a:hover {
+    background: #fff;
+    color: #000;
+}
+
+section article img {
+    margin-top: 1px;
+    width: 100%;
+}
+
+/* Header */
+
 header nav {
-    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1em;
+    padding: 0 1em;
+    padding-top: 1em;
+}
+
+header nav.homepage {
+    position: absolute;
+    width: -webkit-fill-available;
+    z-index: 1;
 }
 
 header nav .logo h1 {
@@ -24,20 +112,64 @@ header nav ul.nav-menu {
     justify-content: center;
 }
 
-header nav ul.nav-menu li {
+header nav ul.nav-menu > li {
     margin: 0 2em;
 }
 
-header nav ul.nav-menu li a {
+header nav ul.nav-menu > li a {
     color: #000;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
+    padding-bottom: 1.5em;
     text-decoration: none;
     transition: .2s;
 }
 
+header nav ul.nav-menu > li a span {
+    margin-left: 1em;
+}
+
+header nav ul.nav-menu > li a {
+    border-bottom: 2px solid transparent;
+    display: block;
+}
+
 header nav ul.nav-menu li a:hover {
     color: #113CFC;
+}
+
+header nav ul ul {
+    background: #fff;
+    border: 1px solid #bbb;
+    display: none;
+    flex-direction: column;
+    padding: 1em 0;
+    position: absolute;
+    transform: translateX(-2.5em);
+    z-index: 99;
+}
+
+header nav ul li:hover ul {
+    animation-name: dropdown;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    display: flex;
+}
+
+header nav ul li ul li {
+    align-items: center;
+    display: flex;
+    margin: 0.5em 0;
+}
+
+header nav ul ul li a {
+    border: 0;
+    color: var(--c-black);
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 0 3em;
+    width: max-content;
 }
 
 header nav .authentication ul {
@@ -50,6 +182,7 @@ header nav .authentication ul li {
 }
 
 header nav .authentication ul li a {
+    color: #000;
     font-family: 'Raleway', sans-serif;
     font-size: 0.9em;
     font-weight: 600;
@@ -60,6 +193,8 @@ header nav .authentication ul li a {
 header nav .authentication ul li a:hover {
     color: #113CFC;
 }
+
+/* Hero */
 
 header .hero {
     display: grid;
@@ -156,76 +291,14 @@ header .hero {
     color: #000;
 }
 
-/* PRODUCTS */
-
-.e-padding {
-    padding: 5em 0;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 15% auto 15%;
-}
-
-.row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column: 2;
-    margin-top: 2em;
-}
-
-section .title {
-    grid-column: 2;
-}
-
-section .title h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2em;
-    font-weight: 600;
-    text-align: center;
-}
-
-section article,
-section .wrapper {
-    display: grid;
-    margin: 0 1em;
-}
-
-.view-more-btn {
-    grid-column: 2;
-    margin-top: 5em;
-    place-self: center;
-}
-
-.view-more-btn a {
-    background: #000;
-    border: 1px solid #000;
-    color: #fff;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.9em;
-    font-weight: 600;
-    padding: 1em 2.5em;
-    text-decoration: none;
-    transition: ease-in .2s;
-}
-
-.view-more-btn a:hover {
-    background: #fff;
-    color: #000;
-}
-
-section article img {
-    padding: 1em;
-    margin-top: 1px;
-    width: 100%;
-}
+/* Homepage - Products */
 
 section.products article a {
     color: #000;
     font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
     font-weight: 600;
-    margin-left: 1em;
+    margin-top: 1em;
     text-decoration: none;
     transition: ease-in .2s;
 }
@@ -239,11 +312,100 @@ section.products p {
     font-family: 'Lora', sans-serif;
     font-size: 1em;
     font-weight: 600;
-    margin-left: 1em;
     margin-top: 0.5em;
 }
 
-/* PRODUCT DELIVERY */
+/* Homepage - Hot deals */
+
+section.hot-deals .wrapper {
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+section.hot-deals .wrapper h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.75em;
+    font-weight: 600;
+}
+
+section.hot-deals .wrapper .content-title p {
+    font-family: 'Lora';
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+section.hot-deals .wrapper ul {
+    display: flex;
+    gap: 3em;
+    margin-top: 2em;
+}
+
+section.hot-deals .wrapper ul li h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+section.hot-deals .wrapper .content-price p {
+    font-family: 'Lora', sans-serif;
+    margin-top: 0.25em;
+}
+
+section.hot-deals .wrapper .content-description p {
+    font-family: 'Lora', sans-serif;
+    margin-top: 2em;
+}
+
+section.hot-deals .wrapper .product-purchase {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+section.hot-deals .wrapper .product-purchase ul {
+    margin-top: 2em;
+}
+
+section.hot-deals .wrapper .product-purchase ul li a {
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.5em 2.5em;
+    text-decoration: none;
+    transition: .2s;
+}
+
+section.hot-deals .wrapper .product-purchase ul li:first-child a {
+    background: #000;
+    color: #fff;
+}
+
+section.hot-deals .wrapper .product-purchase ul li:first-child a:hover {
+    background: #fff;
+    color: #000;
+}
+
+section.hot-deals .wrapper .product-purchase ul li:nth-child(2) a:hover {
+    background: #000;
+    color: #fff;
+}
+
+section.hot-deals .owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 2em;
+}
+
+section.hot-deals .owl-theme .owl-dots .owl-dot span {
+    background: #000;
+    border-radius: 0;
+}
+
+section.hot-deals .owl-theme .owl-dots .owl-dot.active span {
+    background: #113CFC;
+}
+
+/* Homepage - Product Delivery */
 
 section.product-delivery {
     background: #113CFC;
@@ -261,24 +423,23 @@ section.product-delivery .wrapper p {
     margin-left: 1em;
 }
 
-/* CUSTOMER REVIEWS */
+/* Homepage - Customer Reviews */
 
 section.customer-reviews article h3 {
     font-family: 'Raleway', sans-serif;
-    margin-left: 1em;
+    margin-top: 0.5em;
 }
 
 section.customer-reviews article ul {
     display: inline-flex;
-    margin-left: 1em;
     margin-top: 0.5em;
 }
 
 section.customer-reviews article ul li svg{
     fill: rgb(17, 60, 252);
-    height: 1.5em;
+    height: 1.1em;
     stroke: #113CFC;
-    width: 1.5em;
+    width: 1.1em;
 }
 
 section.customer-reviews article p {
@@ -286,11 +447,10 @@ section.customer-reviews article p {
     font-family: 'Lora';
     font-size: 0.9em;
     line-height: 1.5;
-    margin-left: 1em;
     margin-top: 1em;
 }
 
-/* BEST DEALS */
+/* Homepage - Best Deals */
 
 section.best-deals {
     background: linear-gradient(30deg, rgba(0, 0, 0, 0.9), rgba(17, 60, 252, 0.9)), url('../images/best-deals.jpg');
@@ -313,11 +473,11 @@ section.best-deals .wrapper h1 {
 
 section.best-deals .wrapper p {
     color: #ddd;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lora', sans-serif;
     font-size: 0.9em;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.5;
-    margin: 0 15%;
+    margin: 0 10%;
     margin-top: 1em;
 }
 
@@ -343,14 +503,14 @@ section.best-deals .wrapper .explore-btn a:hover {
     color: #fff;
 }
 
-/* PRODUCT CATEGORIES */
+/* Homepage - Product Categories */
 
 section.product-categories article a {
     color: #000;
     font-family: 'Raleway', sans-serif;
     font-size: 1.1em;
     font-weight: 600;
-    margin-left: 1em;
+    margin-top: 0.5em;
     text-decoration: none;
     transition: ease-in .2s;
 }
@@ -359,16 +519,7 @@ section.product-categories article a:hover {
     color: #113CFC;
 }
 
-section.product-categories p {
-    color: #666;
-    font-family: 'Lora', sans-serif;
-    font-size: 1em;
-    font-weight: 600;
-    margin-left: 1em;
-    margin-top: 0.5em;
-}
-
-/* NEWSLETTERS */
+/* Homepage - Newsletters */
 
 section.newsletters .wrapper {
     background: #000;
@@ -377,7 +528,6 @@ section.newsletters .wrapper {
     margin: 0 auto;
     padding: 2em;
     text-align: center;
-    width: 50%;
 }
 
 section.newsletters .wrapper h2 {
@@ -411,10 +561,6 @@ section.newsletters .wrapper form input {
     width: fit-content;
 }
 
-section.newsletters .wrapper form input[type="email"] {
-    width: 25%;
-}
-
 section.newsletters .wrapper form button {
     background: #fff;
     border: 1px solid #fff;
@@ -433,73 +579,398 @@ section.newsletters .wrapper form button:hover {
     color: #fff;
 }
 
-/* FAQ */
+/* Products - Company workflow */
 
-section.faq .accordion-body {
+section.company-workflow {
+    background: #EEEEEE;
+}
+
+section.company-workflow .wrapper {
     grid-column: 2;
+    padding: 0.5em 0;
+}
+
+section.company-workflow .wrapper > ul {
+    justify-content: space-between;
+}
+
+section.company-workflow .wrapper ul,
+section.company-workflow .wrapper ul li {
+    display: flex;
+}
+
+section.company-workflow .wrapper > ul li {
+    align-items: center;
+}
+
+section.company-workflow .wrapper ul li svg {
+    height: 1.5em;
+    stroke: #000;
+    width: 1.5em;
+}
+
+section.company-workflow .wrapper ul li p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin-left: 1em;
+}
+
+/* Products - Products */
+
+section.products .row {
+    margin: 0;
+}
+
+section.products .wrapper .products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1em;
+}
+
+section.products .view-more {
+    grid-column: 2;
+    margin-top: 5em;
+    text-align: center;
+}
+
+section.products .view-more a {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 0.75em 2.5em;
+    text-decoration: none;
+    transition: .2s;
+}
+
+section.products .view-more a:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Single Product - Product Overview */
+
+section.product-summary .wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2em;
+}
+
+section.product-summary .wrapper .product-preview ul {
+    display: flex;
+    gap: 1em;
+}
+
+section.product-summary .product-overview .product-title h1 {
+    font-family: 'Raleway', sans-serif;
+}
+
+section.product-summary .product-overview .product-details {
     margin-top: 2em;
 }
 
-section.faq .accordion {
-    width: 50%;
-    margin: 0 auto;
-    color: black;
-    background-color: white;
+section.product-summary .product-overview .product-details > div {
+    margin: 2em 0;
 }
 
-section.faq .accordion .faq-wrapper {
-    border: 1px solid rgb(185, 185, 185);
-    padding: 0.5em 2em;
-    margin: 0.5em 0;
-    position: relative;
-}  
-  
-section.faq .accordion .label {
-    position: relative;
-    padding: 10px 0;
-    font-size: 1.2em;
-    font-family: 'Raleway';
-    color: black;
-    cursor: pointer;
+section.product-summary .product-overview .product-details h4 {
+    color: #666;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
 }
 
-section.faq .accordion .label::before {
-    content: '+';
-    color: black;
-    position: absolute;
-    top: 50%;
-    right: -5px;
-    font-size: 30px;
-    transform: translateY(-50%);
-}
- 
-section.faq .accordion .label h3 {
-    font-size: 1em;
-}
-  
-section.faq .accordion .content {
-    position: relative;
-    background: white;
-    height: 0;
-    font-size: 1em;
-    text-align: justify;
-    overflow: hidden;
-    transition: 0.5s;
-}
-
-section.faq .accordion .content p {
+section.product-summary .product-overview .product-details h1 {
+    color: #000;
     font-family: 'Lora', sans-serif;
+    font-size: 2.5em;
     font-weight: 500;
+}
+
+section.product-summary .product-overview .product-details input,
+section.product-summary .product-overview .product-details button {
+    font-size: 1em;
+}
+
+section.product-summary .product-overview .product-details input {
+    border: 2px solid #ddd;
+    border-radius: 0;
+    margin-top: 0.5em;
+    padding: 0.5em 1em;
+}
+
+section.product-summary .product-overview .product-details button {
+    background: #113CFC;
+    border: 2px solid #113CFC;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    padding: 0.5em 2.5em;
+    text-transform: uppercase;
+    transition: .2s;
+}
+
+section.product-summary .product-overview .product-details button:hover {
+    background: transparent;
+    color: #113CFC;
+}
+
+section.product-summary .product-overview .product-details p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 0.5em;
+}
+
+/* Coming Soon */
+
+section.coming-soon .wrapper {
+    padding: 2em 0;
+    place-content: center;
+    place-items: center;
+}
+
+section.coming-soon .wrapper .image {
+    text-align: center;
+}
+
+section.coming-soon .wrapper img {
+    width: 75%;
+}
+
+section.coming-soon .wrapper .content {
+    margin-top: 2em;
+    text-align: center;
+}
+
+section.coming-soon .wrapper .content h1,
+section.coming-soon .wrapper .content p {
+    color: #113CFC;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+}
+
+section.coming-soon .wrapper .content p {
+    color: #000;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 1.5em;
+}
+
+section.coming-soon .wrapper form {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+section.coming-soon .wrapper form input[type="email"] {
+    border: 2px solid #113CFC;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    width: 50%;
+}
+
+section.coming-soon .wrapper form input[type="email"]::placeholder {
+    color: #113CFC;
+    text-transform: uppercase;
+}
+
+section.coming-soon .wrapper form button {
+    background: #113CFC;
+    border: 2px solid #113CFC;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    padding: 0.75em 2.5em;
+    transition: .2s;
+}
+
+section.coming-soon .wrapper form button:hover {
+    background: #fff;
+    color: #113CFC;
+}
+
+/* Contact - Form */
+
+section.contact .wrapper {
+    border: 1px solid #000;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 50%;
+}
+
+section.contact .wrapper .contact-column {
+    width: 100%;
+}
+
+section.contact .wrapper form,
+section.contact .wrapper .contact-column:nth-child(2) {
+    padding: 2em;
+    width: fit-content;
+}
+
+section.contact .wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+section.contact .wrapper form input,
+section.contact .wrapper form textarea {
+    border: none;
+    border-bottom: 1px solid #bbb;
+    padding: 10px 0;
+}
+
+section.contact .wrapper form input {
+    height: fit-content;
+}
+
+section.contact .wrapper form input,
+section.contact .wrapper form textarea,
+section.contact .wrapper form button {
+    margin: 10px 0;
+}
+
+section.contact .wrapper form input:focus,
+section.contact .wrapper form textarea:focus {
+    outline: none;
+}
+
+section.contact .wrapper form input,
+section.contact .wrapper form textarea,
+section.contact .wrapper form input::-webkit-input-placeholder,
+section.contact .wrapper form textarea::-webkit-input-placeholder {
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+section.contact .wrapper form textarea {
+    resize: none;
+}
+
+section.contact .wrapper form button {
+    background: #000;
+    border: 1px solid #000;
+    border-radius: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 0.75em 2em;
+    transition: .2s;
+    width: fit-content;
+}
+
+section.contact .wrapper form button:hover {
+    background: #fff;
+    color: #000;
+}
+
+section.contact .wrapper .contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+section.contact .wrapper .contact-info .contact-info-detail {
+    margin: 1.5em 0;
+    width: fit-content;
+}
+
+section.contact .wrapper .contact-info h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}
+
+section.contact .wrapper .contact-info p {
+    font-family: 'Lora', sans-serif;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+
+section.contact .wrapper .contact-info .contact-info-note {
+    margin-top: auto;
+}
+
+section.contact .wrapper .contact-info h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+/* Register - Form */
+
+section.registration .wrapper {
+    margin: 0 auto;
+}
+
+section.registration .wrapper form .input-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.registration .wrapper form label {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
     margin: 1em 0;
 }
 
-section.faq .accordion .faq-wrapper.active .content {
-    height: 10rem;
+section.registration .wrapper form input {
+    border: 1px solid #000;
+    border-radius: 0;
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+    width: 100%;
 }
-  
-section.faq .accordion .faq-wrapper.active .label::before {
-    content: '-';
-    font-size: 30px;
+
+section.registration .wrapper form button {
+    background: #000;
+    border: 1px solid #000;
+    border-radius: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    font-weight: 5em;
+    margin-top: 2em;
+    padding: 1em;
+    transition: .2s;
+    width: 100%;
+}
+
+section.registration .wrapper form button:hover {
+    background: #fff;
+    color: #000;
+}
+
+section.registration .wrapper form .register-redirect {
+    margin-top: 1em;
+    text-align: center;
+}
+
+section.registration .wrapper form .register-redirect a {
+    color: #000;
+    font-family: 'Lora', sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 /* FOOTER */
@@ -511,6 +982,7 @@ footer {
 
 footer article {
     margin: 0 auto;
+    text-align: center;
 }
 
 footer h2 {
@@ -518,13 +990,13 @@ footer h2 {
 }
 
 footer ul {
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 footer ul li {
     font-family: 'Raleway', sans-serif;
     font-size: 0.9em;
-    margin: 0.5em 0;
+    margin: 1em 0;
 }
 
 footer .social-media ul {
@@ -546,6 +1018,63 @@ footer ul li a:hover ion-icon {
     color: #113CFC;
 }
 
+@media only screen and (max-width: 1080px) {
+    .container {
+        display: grid;
+        grid-template-columns: 5% auto 5%;
+    }
+    
+    header nav ul.nav-menu {
+        display: none;
+    }
+
+    header .hero {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .hero-image {
+        height: 50vh;   
+    }
+
+    .hero-img-left .content {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-img-right .content {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    .hero-image .content {
+        align-items: center;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-image p {
+        display: none;
+    }
+
+    section.hot-deals .wrapper {
+        grid-template-columns: none;
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    section.company-workflow .wrapper ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.company-workflow .wrapper ul ul {
+        flex-direction: row;
+    }
+
+    section.contact .wrapper {
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 430px) and (orientation: portrait) {
     header .hero {
         grid-template-columns: auto;
@@ -558,10 +1087,6 @@ footer ul li a:hover ion-icon {
 
     .hero-image .content {
         margin-left: 0;
-        left: 0;
-        margin-left: 1em;
-        top: 50%;
-        transform: translateY(-50%);
         width: 100%;
         z-index: 1;
     }
@@ -576,5 +1101,27 @@ footer ul li a:hover ion-icon {
 
     .hero-image a {
         font-size: 0.8em;
+    }
+
+    section.coming-soon .wrapper .content h1 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    section.hot-deals .wrapper .product-purchase ul {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@keyframes dropdown {
+    0%   { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
     }
 }
