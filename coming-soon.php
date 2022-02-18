@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Raleway:wght@300;400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Raleway:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <title>Document</title>
 </head>
@@ -22,61 +23,57 @@
             </div>
             <ul class="nav-menu">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                 </li>
                 <li>
-                    <a href="#!">Products <span>•</span></a>
+                    <a href="#!">Products <span>+</span></a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="products.html">All products</a>
+                            <a href="products.php">All products</a>
                         </li>
                         <li>
-                            <a href="single-product.html">Single product</a>
+                            <a href="single-product.php">Single product</a>
                         </li>
                         <li>
-                            <a href="coming-soon.html">Coming Soon</a>
+                            <a href="coming-soon.php">Coming Soon</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.php">Contact</a>
                 </li>
             </ul>
             <div class="authentication">
                 <ul>
                     <li>
-                        <a href="login.html">Login</a>
+                        <a href="login.php">Login</a>
                     </li>
                     <li>
-                        <a href="register.html">Register</a>
+                        <a href="logout.php">Logout</a>
+                    </li>
+                    <li>
+                        <a href="register.php">Register</a>
                     </li>
                 </ul>
             </div>
         </nav>
+        <div class="hero">
+            
+        </div>
     </header>
     <main>
-        <section class="registration e-padding">
+        <section class="coming-soon e-padding">
             <div class="container">
-                <div class="title">
-                    <h1>Login</h1>
-                </div>
                 <div class="row">
                     <div class="wrapper">
-                        <form action="/" method="post">
-                            <div class="input-control">
-                                <label for="email">Email Address</label>
-                                <input type="email" name="email" id="email">
-                            </div>
-                            <div class="input-control">
-                                <label for="password">Password</label>
-                                <input type="password" name="password" id="password">
-                            </div>
-                            <div class="input-control">
-                                <button type="submit">Login</button>
-                            </div>
-                            <div class="register-redirect">
-                                <a href="register.html">Don't have an account?</a>
-                            </div>
+                        <img src="assets/images/svg/work-in-progress.svg" alt="">
+                        <div class="content">
+                            <h1>Work in progress</h1>
+                            <p>Are you ready?</p>
+                        </div>
+                        <form>
+                            <input type="email" id="email" placeholder="Email Address">
+                            <button type="submit">Send</button>
                         </form>
                     </div>
                 </div>
@@ -159,6 +156,8 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script defer src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

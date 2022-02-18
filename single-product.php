@@ -24,33 +24,36 @@
             </div>
             <ul class="nav-menu">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                 </li>
                 <li>
                     <a href="#!">Products <span>+</span></a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="products.html">All products</a>
+                            <a href="products.php">All products</a>
                         </li>
                         <li>
-                            <a href="single-product.html">Single product</a>
+                            <a href="single-product.php">Single product</a>
                         </li>
                         <li>
-                            <a href="coming-soon.html">Coming Soon</a>
+                            <a href="coming-soon.php">Coming Soon</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.php">Contact</a>
                 </li>
             </ul>
             <div class="authentication">
                 <ul>
                     <li>
-                        <a href="login.html">Login</a>
+                        <a href="login.php">Login</a>
                     </li>
                     <li>
-                        <a href="register.html">Register</a>
+                        <a href="logout.php">Logout</a>
+                    </li>
+                    <li>
+                        <a href="register.php">Register</a>
                     </li>
                 </ul>
             </div>

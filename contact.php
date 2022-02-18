@@ -23,33 +23,36 @@
             </div>
             <ul class="nav-menu">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                 </li>
                 <li>
                     <a href="#!">Products <span>+</span></a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="products.html">All products</a>
+                            <a href="products.php">All products</a>
                         </li>
                         <li>
-                            <a href="single-product.html">Single product</a>
+                            <a href="single-product.php">Single product</a>
                         </li>
                         <li>
-                            <a href="coming-soon.html">Coming Soon</a>
+                            <a href="coming-soon.php">Coming Soon</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.php">Contact</a>
                 </li>
             </ul>
             <div class="authentication">
                 <ul>
                     <li>
-                        <a href="login.html">Login</a>
+                        <a href="login.php">Login</a>
                     </li>
                     <li>
-                        <a href="register.html">Register</a>
+                        <a href="logout.php">Logout</a>
+                    </li>
+                    <li>
+                        <a href="register.php">Register</a>
                     </li>
                 </ul>
             </div>
@@ -59,19 +62,41 @@
         </div>
     </header>
     <main>
-        <section class="coming-soon e-padding">
+        <section class="contact e-padding">
             <div class="container">
+                <div class="title">
+                    <h1>We'd love to hear from you</h1>
+                    <p>If you have any questions or queries a member of staff will always be happy to help. Feel free to contact us by telephone or email and we will be sure to get back to you as soon as possible.</p>
+                </div>
                 <div class="row">
                     <div class="wrapper">
-                        <img src="assets/images/svg/work-in-progress.svg" alt="">
-                        <div class="content">
-                            <h1>Work in progress</h1>
-                            <p>Are you ready?</p>
+                        <div class="contact-column contact-form">
+                            <form>
+                                <input size="1" type="text" name="fname" id="fname" placeholder="First Name *">
+                                <input size="1" type="text" name="lname" id="lname" placeholder="Last Name *">
+                                <input size="1" type="email" name="email" id="email" placeholder="Email Address *">
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message *"></textarea>
+                                <button type="submit">Send now</button>
+                            </form>
                         </div>
-                        <form>
-                            <input type="email" id="email" placeholder="Email Address">
-                            <button type="submit">Send</button>
-                        </form>
+                        <div class="contact-column contact-info">
+                            <div class="contact-info-detail contact-info-greeting">
+                                <h3>Send greetings</h3>
+                                <p>hello@e-commerce.com</p>
+                            </div>
+                            <div class="contact-info-detail contact-info-career">
+                                <h3>Careers</h3>
+                                <p>jobs@e-commerce.com</p>
+                            </div>
+                            <div class="contact-info-detail contact-info-address">
+                                <h3>Find us here</h3>
+                                <p>NY, Queens, 24th St.</p>
+                                <p>NY, Brooklyn, 11th St.</p>
+                            </div>
+                            <div class="contact-info-detail contact-info-note">
+                                <h4>Note: All fields with an asterisk (*) are required!</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
